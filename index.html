@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TO-DO-LIST</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/b2e54bcdb7.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="container">
+      <h1>To do List</h1>
+
+      <section class="input-area">
+        <input type="text" class="task-input" id="task-input" onkeyup="enterKey()" />
+        <label for="task-label"><span aria-hidden="true">오늘의 할일</span></label>
+        <button class="add-button" id="add-button">
+          <span>할일 추가하기</span>
+        </button>
+      </section>
+
+      <section class="task-area">
+        <div class="task-tabs">
+          <div id="under-line"></div>
+          <div class="tab" id="all">All</div>
+          <div class="tab" id="ongoing">not Done</div>
+          <div class="tab" id="done">Done</div>
+        </div>
+        <div id="task-board"></div>
+      </section>
+    </div>
     <script src="/assets/js/script.js"></script>
   </body>
 </html>

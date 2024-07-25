@@ -3,3 +3,220 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/background.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-top: 10px solid rgb(190, 177, 231);
+  border-bottom: 10px solid rgb(190, 177, 231);
+  width: 50rem;
+  height: 60vh;
+
+  padding: 3rem;
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+// ---------------------------------------------------
+
+.input-area {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  position: relative;
+  gap: 4px;
+
+  margin-bottom: 6px;
+
+  .task-input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    box-shadow: 0 2px 2px 0 lightgray;
+
+    margin-top: 1rem;
+    padding-left: 1rem;
+
+    padding: 0.5rem 1rem;
+
+    width: 20rem;
+
+    cursor: pointer;
+
+    & + label > span {
+      display: none;
+    }
+  }
+
+  .task-input:focus {
+    outline: none;
+    border: none;
+    shadow: none;
+    border-bottom: 2px solid rgb(190, 177, 231);
+    transition: 0.5s;
+    padding-top: 1.5rem;
+  }
+
+  .add-button {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.88rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 177, 231);
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .add-button:hover {
+    border: 1px solid rgb(190, 177, 231);
+    background-color: rgb(190, 177, 231);
+    color: #fff;
+  }
+} // .input-area
+
+// ---------------------------------------------------
+
+.task-area {
+  width: 26.5rem;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 lightgray;
+
+  .task-tabs {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    gap: 3rem;
+    cursor: pointer;
+
+    .tab {
+      padding: 1rem;
+    }
+
+    .task-tabs div {
+      padding: 1rem;
+
+      .tab:hover {
+        color: rgb(190, 177, 231);
+      }
+    }
+
+    #under-line {
+      height: 4px;
+      background-color: rgb(190, 177, 231);
+      position: absolute;
+      width: 1rem;
+      left: 0px;
+      top: 1rem;
+      padding: 0px;
+      transition: 0.4s;
+    }
+  }
+
+  .task-complete {
+    background-color: lightgray;
+  }
+
+  .task-done {
+    text-decoration: line-through;
+  }
+
+  .tab-button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .tab-button:first-child {
+    margin-right: 20px;
+  }
+
+  .task {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+    .fa-circle-plus {
+      color: lightgray;
+      margin-left: 2px;
+    }
+
+    .fa-circle-plus:hover {
+      font-size: 1.5em;
+      transition: 0.2s ease-out;
+    }
+
+    .fa-circle-plus:not(:hover) {
+      transition: 0.3s ease-out;
+    }
+
+    .fa-check {
+      color: rgb(142, 211, 40);
+      cursor: pointer;
+    }
+
+    .fa-check:hover {
+      font-size: 1.3em;
+      transition: 0.2s ease-out;
+    }
+
+    .fa-check:not(:hover) {
+      transition: 0.3s ease-out;
+    }
+
+    .fa-rotate-right {
+      color: gray;
+    }
+
+    .fa-rotate-right:hover {
+      font-size: 1.2em;
+      transition: 0.5s ease-out;
+    }
+    .fa-rotate-right:not(:hover) {
+      transition: 0.3s ease-out;
+    }
+
+    .fa-trash {
+      color: red;
+      cursor: pointer;
+    }
+
+    .fa-trash:hover {
+      font-size: 1.2em;
+      transition: 0.2s ease-out;
+    }
+
+    .fa-trash:not(:hover) {
+      transition: 0.3s ease-out;
+    }
+
+    .task-tabs div {
+      cursor: pointer;
+    }
+  }
+} // .task-area
